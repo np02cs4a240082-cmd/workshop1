@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Contact</title>
+</head>
+<body>
+
+    <h1>Contact Details</h1>
+
+    <p><strong>Name:</strong> {{ $contact->name }}</p>
+
+    <p><strong>Email:</strong> {{ $contact->email }}</p>
+
+    <a href="{{ route('contacts.edit', $contact) }}">Edit</a>
+
+    <br><br>
+
+    <a href="{{ route('contacts.index') }}">Back to Contacts</a>
+
+</body>
+</html>
