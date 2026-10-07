@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>View Contact</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('title', 'Contact Details')
+
+@section('content')
 
     <h1>Contact Details</h1>
 
@@ -13,9 +12,6 @@
 
     <a href="{{ route('contacts.edit', $contact) }}">Edit</a>
 
-    <br><br>
-
     <a href="{{ route('contacts.index') }}">Back to Contacts</a>
 
-</body>
-</html>
+@endsection

@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contacts</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('title', 'Contacts')
+
+@section('content')
 
     <h1>Contacts</h1>
 
@@ -42,5 +41,4 @@
 
     @endforelse
 
-</body>
-</html>
+@endsection

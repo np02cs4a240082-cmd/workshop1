@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Contact</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('title', 'Add Contact')
+
+@section('content')
 
     <h1>Add New Contact</h1>
 
@@ -12,35 +11,15 @@
         @csrf
 
         <div>
-            <label for="name">Name:</label>
-
-            <input
-                type="text"
-                id="name"
-                name="name"
-                value="{{ old('name') }}"
-            >
-
-            @error('name')
-                <p>{{ $message }}</p>
-            @enderror
+            <label>Name:</label>
+            <input type="text" name="name" value="{{ old('name') }}">
         </div>
 
         <br>
 
         <div>
-            <label for="email">Email:</label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                value="{{ old('email') }}"
-            >
-
-            @error('email')
-                <p>{{ $message }}</p>
-            @enderror
+            <label>Email:</label>
+            <input type="email" name="email" value="{{ old('email') }}">
         </div>
 
         <br>
@@ -53,5 +32,4 @@
 
     <a href="{{ route('contacts.index') }}">Back to Contacts</a>
 
-</body>
-</html>
+@endsection
